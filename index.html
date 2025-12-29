@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contraste Publicidad - Servicios profesionales de impresión digital, artículos promocionales y publicidad. 24 horas, 7 días a la semana. Hechos en México, para ti.">
+    <meta name="keywords" content="impresión digital, publicidad, artículos promocionales, lonas, banners, playeras sublimadas, gorras, México, CDMX, espectaculares, displays">
+    <meta name="author" content="Contraste Publicidad">
+    <meta property="og:title" content="Contraste Publicidad - Impresión Digital y Publicidad">
+    <meta property="og:description" content="Servicios profesionales de impresión digital, artículos promocionales y publicidad 24/7">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='80'>C</text></svg>">
+    <title>Contraste Publicidad - Impresión Digital y Publicidad 24/7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .particles-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 50%, #eff6ff 100%);
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #2563eb;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 15s infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); }
+            25% { transform: translateY(-100px) translateX(50px); }
+            50% { transform: translateY(-50px) translateX(-50px); }
+            75% { transform: translateY(-80px) translateX(30px); }
+        }
+
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        nav.scrolled {
+            padding: 0.5rem 0;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #2563eb, #dc2626);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            color: #1f2937;
+        }
+
+        .logo-text p {
+            font-size: 0.875rem;
+            color: #dc2626;
+            font-weight: 600;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #2563eb, #dc2626);
+            transition: width 0.3s;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .nav-menu a:hover {
+            color: #2563eb;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .hero {
+            padding: 150px 2rem 100px;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero .blue { 
+            color: #2563eb;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero .red { 
+            color: #dc2626;
+            background: linear-gradient(135deg, #dc2626, #991b1b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #4b5563;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.6);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #2563eb;
+            border: 2px solid #2563eb;
+        }
+
+        .btn-secondary:hover {
+            background: #eff6ff;
+            transform: translateY(-3px);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(37, 99, 235, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .stat-card:hover::before {
+            left: 100%;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #2563eb, #dc2626);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: #6b7280;
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+
+        section {
+            padding: 80px 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #2563eb, #dc2626);
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            font-size: 1.25rem;
+            color: #6b7280;
+        }
+
+        #servicios {
+            background: white;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, transparent, rgba(37, 99, 235, 0.1));
+            transform: rotate(45deg);
+            transition: all 0.5s;
+        }
+
+        .service-card:hover::before {
+            top: -100%;
+            right: -100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: 0 25px 40px rgba(37, 99, 235, 0.2);
+        }
+
+        .service-card.active {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+        }
+
+        .service-card.active h3,
+        .service-card.active p {
+            color: white;
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .service-card:hover .service-icon {
+            animation: spin 1s ease-in-out;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .service-card h3 {
+            font-size: 1.25rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .service-items {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-out;
+            border-top: 1px solid rgba(229, 231, 235, 0.5);
+            padding-top: 0;
+            margin-top: 1rem;
+            list-style: none;
+        }
+
+        .service-items.active {
+            max-height: 500px;
+            padding-top: 1rem;
+        }
+
+        .service-card.active .service-items {
+            border-top-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .service-items li {
+            padding: 0.5rem 0;
+            color: #374151;
+            display: flex;
+            align-items: center;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        .service-card.active .service-items li {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .service-items li:before {
+            content: "▶";
+            color: #2563eb;
+            margin-right: 0.5rem;
+            font-size: 0.75rem;
+        }
+
+        .service-card.active .service-items li:before {
+            color: white;
+        }
+
+        .service-toggle {
+            color: #2563eb;
+            font-weight: 600;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .service-card.active .service-toggle {
+            color: white;
+        }
+
+        .service-toggle:hover {
+            transform: translateX(5px);
+        }
+
+        #catalogo {
+            background: #f9fafb;
+        }
+
+        .catalog-filter {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.5rem;
+            border: 2px solid #e5e7eb;
+            background: white;
+            color: #374151;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .filter-btn:hover {
+            border-color: #2563eb;
+            color: #2563eb;
+            transform: translateY(-2px);
+        }
+
+        .filter-btn.active {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border-color: transparent;
+        }
+
+        .catalog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .catalog-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .catalog-item.hidden {
+            opacity: 0;
+            transform: scale(0.8);
+            height: 0;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .catalog-item:hover {
+            transform: translateY(-10px) rotate(2deg);
+            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
+        }
+
+        .catalog-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .catalog-item h4 {
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .color-options {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            margin-top: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .color-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .color-dot:hover {
+            transform: scale(1.3);
+            border-color: #1f2937;
+        }
+
+        .color-rojo { background: #dc2626; }
+        .color-azul { background: #2563eb; }
+        .color-amarillo { background: #eab308; }
+        .color-negro { background: #1f2937; }
+        .color-blanco { background: #ffffff; border: 2px solid #e5e7eb; }
+
+        .mission-vision {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mission-vision::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: moveGrid 20s linear infinite;
+        }
+
+        @keyframes moveGrid {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(30px, 30px); }
+        }
+
+        .mv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .mv-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+
+        .mv-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-10px);
+        }
+
+        .mv-card h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .mv-card h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+        }
+
+        #portafolio {
+            background: #f9fafb;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .portfolio-item {
+            height: 300px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .portfolio-item::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            transition: all 0.4s;
+        }
+
+        .portfolio-item:hover::before {
+            background: rgba(0,0,0,0.3);
+        }
+
+        .portfolio-item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .portfolio-item:hover::after {
+            opacity: 1;
+        }
+
+        .portfolio-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            padding: 1.5rem;
+            z-index: 1;
+            transition: transform 0.4s;
+        }
+
+        .portfolio-item:hover .portfolio-content {
+            transform: scale(1.1);
+        }
+
+        .portfolio-content h4 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .portfolio-item.blue { background: linear-gradient(135deg, #60a5fa, #2563eb); }
+        .portfolio-item.red { background: linear-gradient(135deg, #f87171, #dc2626); }
+        .portfolio-item.green { background: linear-gradient(135deg, #4ade80, #16a34a); }
+        .portfolio-item.purple { background: linear-gradient(135deg, #c084fc, #9333ea); }
+        .portfolio-item.orange { background: linear-gradient(135deg, #fb923c, #ea580c); }
+        .portfolio-item.pink { background: linear-gradient(135deg, #f472b6, #ec4899); }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            background: white;
+            font-family: inherit;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 1rem;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .contact-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .contact-card.blue-card { background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%); }
+        .contact-card.red-card { background: linear-gradient(135deg, #fef2f2 0%, #ffffff 100%); }
+        .contact-card.green-card { background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%); }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            flex-shrink: 0;
+            animation: pulse 2s infinite;
+        }
+
+        .contact-icon.blue { background: linear-gradient(135deg, #2563eb, #1d4ed8); }
+        .contact-icon.red { background: linear-gradient(135deg, #dc2626, #991b1b); }
+        .contact-icon.green { background: linear-gradient(135deg, #16a34a, #15803d); }
+
+        .service-24 {
+            background: linear-gradient(135deg, #2563eb, #dc2626);
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-24::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .service-24 h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-24 .hours {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+            animation: pulse 2s infinite;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            padding: 3rem 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            padding: 0.25rem 0;
+            color: #9ca3af;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .footer-section li:hover {
+            color: #2563eb;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            max-width: 500px;
+            width: 90%;
+            animation: slideUp 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .modal-close {
+            float: right;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #6b7280;
+            transition: color 0.3s;
+        }
+
+        .modal-close:hover {
+            color: #dc2626;
+        }
+
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            z-index: 1500;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.5);
+            transition: all 0.3s;
+        }
+
+        .scroll-top.active {
+            display: flex;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(37, 99, 235, 0.7);
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: white;
+                padding: 1rem 2rem;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            .nav-menu.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero h2 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .catalog-filter {
+                gap: 0.5rem;
+            }
+
+            .filter-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.875rem;
+            }
+
+            .catalog-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles-bg" id="particles"></div>
+
+    <nav id="nav">
+        <div class="nav-container">
+            <div class="logo" onclick="window.location.href='#inicio'">
+                <div class="logo-icon">C</div>
+                <div class="logo-text">
+                    <h1>CONTRASTE</h1>
+                    <p>PUBLICIDAD</p>
+                </div>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#portafolio">Portafolio</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle">☰</button>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <h2>Tu <span class="blue">Visión</span>, Nuestra <span class="red">Impresión</span></h2>
+        <p>Servicios profesionales de impresión digital, publicidad y artículos promocionales.<br>
+        <strong>Hechos en México, para ti 🇲🇽</strong></p>
+        <div class="hero-buttons">
+            <a href="#contacto" class="btn btn-primary">Cotiza Ahora →</a>
+            <a href="#catalogo" class="btn btn-secondary">Ver Catálogo</a>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">24</div>
+                <div class="stat-label">Horas Disponibles</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1000</div>
+                <div class="stat-label">Proyectos Realizados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Años Experiencia</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100</div>
+                <div class="stat-label">Satisfacción %</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="section-title">
+            <h2>Nuestros Servicios</h2>
+            <p>Soluciones completas para tu marca</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card" onclick="toggleService(1)">
+                <div class="service-icon">🖨️</div>
+                <h3>Impresión Digital Gran Formato</h3>
+                <p>Lonas, espectaculares, pendones, banners, señalización corporativa y más</p>
+                <ul class="service-items" id="service-1">
+                    <li>Lonas publicitarias 13 onz</li>
+                    <li>Espectaculares y pendones</li>
+                    <li>Punto de venta</li>
+                    <li>Black light</li>
+                    <li>Banners y mamparas</li>
+                    <li>Paneles informativos</li>
+                    <li>Clones de polipropileno</li>
+                </ul>
+                <button class="service-toggle">Ver más →</button>
+            </div>
+
+            <div class="service-card" onclick="toggleService(2)">
+                <div class="service-icon">📦</div>
+                <h3>Empalmado y Suajado</h3>
+                <p>Displays, exhibidores y stands arquitectónicos personalizados</p>
+                <ul class="service-items" id="service-2">
+                    <li>Display's profesionales</li>
+                    <li>Estireno y microcorrugado</li>
+                    <li>Cartón corrugado</li>
+                    <li>Coroplas/Cororplast</li>
+                    <li>Exhibidores móviles</li>
+                    <li>Stands arquitectónicos</li>
+                </ul>
+                <button class="service-toggle">Ver más →</button>
+            </div>
+
+            <div class="service-card" onclick="toggleService(3)">
+                <div class="service-icon">🎨</div>
+                <h3>Artículos Promocionales</h3>
+                <p>Productos personalizados para fortalecer tu marca</p>
+                <ul class="service-items" id="service-3">
+                    <li>Playeras sublimadas</li>
+                    <li>Gorras para campaña</li>
+                    <li>Termos y tazas</li>
+                    <li>Llaveros y destapadores</li>
+                    <li>Agendas y cuadernos</li>
+                    <li>Bolsas ecológicas</li>
+                    <li>Transfermania</li>
+                </ul>
+                <button class="service-toggle">Ver más →</button>
+            </div>
+
+            <div class="service-card" onclick="toggleService(4)">
+                <div class="service-icon">📈</div>
+                <h3>Diseño y Contenido</h3>
+                <p>Creación de diseños únicos para tu negocio</p>
+                <ul class="service-items" id="service-4">
+                    <li>Diseño gráfico profesional</li>
+                    <li>Identidad corporativa</li>
+                    <li>Material POP</li>
+                    <li>Rotulación de flotillas</li>
+                    <li>Volantes y dípticos</li>
+                    <li>Etiquetas personalizadas</li>
+                </ul>
+                <button class="service-toggle">Ver más →</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalogo">
+        <div class="section-title">
+            <h2>Catálogo de Productos</h2>
+            <p>Todos nuestros productos disponibles en múltiples colores</p>
+        </div>
+
+        <div class="catalog-filter">
+            <button class="filter-btn active" onclick="filterCatalog('todos', event)">Todos</button>
+            <button class="filter-btn" onclick="filterCatalog('textil', event)">Textil</button>
+            <button class="filter-btn" onclick="filterCatalog('promocionales', event)">Promocionales</button>
+            <button class="filter-btn" onclick="filterCatalog('oficina', event)">Oficina</button>
+            <button class="filter-btn" onclick="filterCatalog('impresos', event)">Impresos</button>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid">
+            <div class="catalog-item" data-category="textil" onclick="showProductModal('Playeras Sublimadas', '👕')">
+                <div class="catalog-icon">👕</div>
+                <h4>Playeras Sublimadas</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo" title="Rojo"></div>
+                    <div class="color-dot color-azul" title="Azul"></div>
+                    <div class="color-dot color-amarillo" title="Amarillo"></div>
+                    <div class="color-dot color-negro" title="Negro"></div>
+                    <div class="color-dot color-blanco" title="Blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="textil" onclick="showProductModal('Camisas', '👔')">
+                <div class="catalog-icon">👔</div>
+                <h4>Camisas</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="textil" onclick="showProductModal('Gorras', '🧢')">
+                <div class="catalog-icon">🧢</div>
+                <h4>Gorras Bull Denim</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="textil" onclick="showProductModal('Mandiles', '🍳')">
+                <div class="catalog-icon">🍳</div>
+                <h4>Mandiles</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="textil" onclick="showProductModal('Rompe Vientos', '🧥')">
+                <div class="catalog-icon">🧥</div>
+                <h4>Rompe Vientos</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="textil" onclick="showProductModal('Impermeables', '☔')">
+                <div class="catalog-icon">☔</div>
+                <h4>Impermeables</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Plumas', '✒️')">
+                <div class="catalog-icon">✒️</div>
+                <h4>Plumas</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Lápices', '✏️')">
+                <div class="catalog-icon">✏️</div>
+                <h4>Lápices</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Encendedores', '🔥')">
+                <div class="catalog-icon">🔥</div>
+                <h4>Encendedores</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Llaveros & Destapadores', '🔑')">
+                <div class="catalog-icon">🔑</div>
+                <h4>Llaveros & Destapadores</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Fotobotones', '📸')">
+                <div class="catalog-icon">📸</div>
+                <h4>Fotobotones</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Parasoles', '☂️')">
+                <div class="catalog-icon">☂️</div>
+                <h4>Parasoles</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Gomas para Campaña', '🗳️')">
+                <div class="catalog-icon">🗳️</div>
+                <h4>Gomas para Campaña</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="oficina" onclick="showProductModal('Thermos & Tazas', '🍵')">
+                <div class="catalog-icon">🍵</div>
+                <h4>Thermos & Tazas</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="oficina" onclick="showProductModal('Cilindros para Agua', '💧')">
+                <div class="catalog-icon">💧</div>
+                <h4>Cilindros para Agua</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="oficina" onclick="showProductModal('Agendas Magnéticas', '📓')">
+                <div class="catalog-icon">📓</div>
+                <h4>Agendas Magnéticas</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="oficina" onclick="showProductModal('Carpetas', '📁')">
+                <div class="catalog-icon">📁</div>
+                <h4>Carpetas</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="oficina" onclick="showProductModal('Cuadernos', '📔')">
+                <div class="catalog-icon">📔</div>
+                <h4>Cuadernos</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="oficina" onclick="showProductModal('Relojes', '⌚')">
+                <div class="catalog-icon">⌚</div>
+                <h4>Relojes Pulso & Pared</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Bolsas Ecológicas', '🛍️')">
+                <div class="catalog-icon">🛍️</div>
+                <h4>Bolsas Ecológicas</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Morrales', '🎒')">
+                <div class="catalog-icon">🎒</div>
+                <h4>Morrales</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Mochilas', '🎒')">
+                <div class="catalog-icon">🎒</div>
+                <h4>Mochilas</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Hieleras', '🧊')">
+                <div class="catalog-icon">🧊</div>
+                <h4>Hieleras</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="impresos" onclick="showProductModal('Volantes 1/4 - 1/2 Carta', '📄')">
+                <div class="catalog-icon">📄</div>
+                <h4>Volantes 1/4 - 1/2 Carta</h4>
+            </div>
+
+            <div class="catalog-item" data-category="impresos" onclick="showProductModal('Dípticos', '📋')">
+                <div class="catalog-icon">📋</div>
+                <h4>Dípticos</h4>
+            </div>
+
+            <div class="catalog-item" data-category="impresos" onclick="showProductModal('Trípticos', '📋')">
+                <div class="catalog-icon">📋</div>
+                <h4>Trípticos</h4>
+            </div>
+
+            <div class="catalog-item" data-category="impresos" onclick="showProductModal('Posters Doble Carta', '🖼️')">
+                <div class="catalog-icon">🖼️</div>
+                <h4>Posters Doble Carta</h4>
+            </div>
+
+            <div class="catalog-item" data-category="impresos" onclick="showProductModal('Etiquetas Personalizadas', '🏷️')">
+                <div class="catalog-icon">🏷️</div>
+                <h4>Etiquetas Autos/Casa</h4>
+            </div>
+
+            <div class="catalog-item" data-category="impresos" onclick="showProductModal('Papel para Tortillas', '🌮')">
+                <div class="catalog-icon">🌮</div>
+                <h4>Papel para Tortillas</h4>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Costureros', '🧵')">
+                <div class="catalog-icon">🧵</div>
+                <h4>Costureros</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Servilleteros', '🍽️')">
+                <div class="catalog-icon">🍽️</div>
+                <h4>Servilleteros</h4>
+                <div class="color-options">
+                    <div class="color-dot color-rojo"></div>
+                    <div class="color-dot color-azul"></div>
+                    <div class="color-dot color-amarillo"></div>
+                    <div class="color-dot color-negro"></div>
+                    <div class="color-dot color-blanco"></div>
+                </div>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Juego de Cartas', '🃏')">
+                <div class="catalog-icon">🃏</div>
+                <h4>Juego de Cartas</h4>
+            </div>
+
+            <div class="catalog-item" data-category="promocionales" onclick="showProductModal('Juego de la Oca', '🎲')">
+                <div class="catalog-icon">🎲</div>
+                <h4>Juego de la Oca</h4>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision">
+        <div class="mv-grid">
+            <div class="mv-card">
+                <h3>Misión</h3>
+                <p>Salvamos más que el cliente al que van dirigidos nuestros servicios de publicidad. 
+                Nos enfocamos en crear soluciones efectivas que superen las expectativas, combinando 
+                tecnología de punta con creatividad innovadora para impulsar el éxito de cada proyecto.</p>
+            </div>
+            <div class="mv-card">
+                <h3>Visión</h3>
+                <p>Ser la empresa líder en servicios de impresión digital y publicidad en México, 
+                reconocidos por nuestra calidad, innovación y compromiso con cada proyecto. 
+                Expandir nuestros servicios manteniendo la excelencia que nos caracteriza.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portafolio">
+        <div class="section-title">
+            <h2>Portafolio</h2>
+            <p>Algunos de nuestros trabajos destacados</p>
+        </div>
+
+        <div class="portfolio-grid">
+            <div class="portfolio-item blue">
+                <div class="portfolio-content">
+                    <h4>Señalización Comercial</h4>
+                    <p>Gran Formato · Lonas 13 onz</p>
+                </div>
+            </div>
+            <div class="portfolio-item red">
+                <div class="portfolio-content">
+                    <h4>Artículos Promocionales</h4>
+                    <p>Productos Personalizados</p>
+                </div>
+            </div>
+            <div class="portfolio-item green">
+                <div class="portfolio-content">
+                    <h4>Stands y Exhibidores</h4>
+                    <p>Displays Profesionales</p>
+                </div>
+            </div>
+            <div class="portfolio-item purple">
+                <div class="portfolio-content">
+                    <h4>Playeras Sublimadas</h4>
+                    <p>Textil Personalizado</p>
+                </div>
+            </div>
+            <div class="portfolio-item orange">
+                <div class="portfolio-content">
+                    <h4>Espectaculares</h4>
+                    <p>Publicidad Exterior</p>
+                </div>
+            </div>
+            <div class="portfolio-item pink">
+                <div class="portfolio-content">
+                    <h4>Rotulación de Flotillas</h4>
+                    <p>Branding Vehicular</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="section-title">
+            <h2>Contáctanos</h2>
+            <p>Estamos disponibles 24 horas para atenderte</p>
+        </div>
+
+        <div class="contact-grid">
+            <div class="contact-form">
+                <h3>Solicita tu cotización</h3>
+                <div class="form-group">
+                    <input type="text" placeholder="Nombre completo" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Correo electrónico" id="email" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" placeholder="Teléfono" id="telefono" required>
+                </div>
+                <div class="form-group">
+                    <select id="servicio">
+                        <option value="">Selecciona un servicio</option>
+                        <option value="digital">Impresión Digital Gran Formato</option>
+                        <option value="promocionales">Artículos Promocionales</option>
+                        <option value="empalmado">Empalmado y Suajado</option>
+                        <option value="diseno">Diseño Gráfico</option>
+                        <option value="textil">Textil y Sublimación</option>
+                        <option value="impresos">Impresos (Volantes, Dípticos)</option>
+                        <option value="flotillas">Rotulación de Flotillas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Describe tu proyecto" rows="4" id="mensaje"></textarea>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;" onclick="enviarFormulario()">
+                    ✉ Enviar Solicitud
+                </button>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-card blue-card">
+                    <div class="contact-icon blue">📞</div>
+                    <div>
+                        <h4>Teléfono</h4>
+                        <p><strong>Nextel: 3538-2706</strong></p>
+                        <p style="font-size: 0.875rem; color: #6b7280;">Servicio 24 horas, 7 días</p>
+                    </div>
+                </div>
+
+                <div class="contact-card red-card">
+                    <div class="contact-icon red">✉️</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p style="font-size: 0.875rem; word-break: break-all;">contraste_publicidad_1@yahoo.com.mx</p>
+                        <p style="font-size: 0.875rem; word-break: break-all;">contraste_publicidad_0@yahoo.com.mx</p>
+                    </div>
+                </div>
+
+                <div class="contact-card green-card">
+                    <div class="contact-icon green">📍</div>
+                    <div>
+                        <h4>Ubicación</h4>
+                        <p><strong>Ciudad de México</strong></p>
+                        <p style="font-size: 0.875rem; color: #6b7280;">Sucursales en Cuauhtémoc y Azcapotzalco</p>
+                    </div>
+                </div>
+
+                <div class="service-24">
+                    <h4>¡Servicio 24/7!</h4>
+                    <p>Estamos disponibles cuando nos necesites</p>
+                    <div class="hours">24 HRS</div>
+                    <p style="margin-top: 1rem; font-size: 0.875rem;">💳 Facilidades de pago:<br>3 y 6 meses sin intereses</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CONTRASTE PUBLICIDAD</h3>
+                <p style="color: #9ca3af;">Diseño, impresión y rotulación digital de calidad superior</p>
+                <p style="color: #9ca3af; margin-top: 1rem;">15+ años de experiencia en el mercado mexicano</p>
+            </div>
+            <div class="footer-section">
+                <h3>Servicios</h3>
+                <ul>
+                    <li>Impresión Digital Gran Formato</li>
+                    <li>Artículos Promocionales</li>
+                    <li>Empalmado y Suajado</li>
+                    <li>Diseño Gráfico</li>
+                    <li>Rotulación de Flotillas</li>
+                    <li>Sublimación Textil</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Horario y Contacto</h3>
+                <p style="color: #9ca3af;">Servicio de Maquila disponible las 24 horas</p>
+                <p style="color: #9ca3af; margin-top: 1rem;"><strong>Tel:</strong> Nextel 3538-2706</p>
+                <p style="color: #9ca3af; margin-top: 0.5rem;"><strong>Financiamiento:</strong><br>3 y 6 meses sin intereses</p>
+            </div>
+            <div class="footer-section">
+                <h3>Productos Destacados</h3>
+                <ul>
+                    <li>Playeras y Gorras</li>
+                    <li>Lonas y Espectaculares</li>
+                    <li>Displays y Exhibidores</li>
+                    <li>Material Impreso</li>
+                    <li>Artículos Promocionales</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Contraste Publicidad. Todos los derechos reservados.</p>
+            <p style="margin-top: 0.5rem;">Hechos en México, para ti 🇲🇽</p>
+        </div>
+    </footer>
+
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" style="margin-bottom: 1rem;"></h2>
+            <div style="font-size: 4rem; text-align: center; margin: 2rem 0;" id="modalIcon"></div>
+            <p style="text-align: center; color: #6b7280; margin-bottom: 2rem;">
+                Producto disponible para personalización con tu marca o diseño.<br>
+                <strong>Disponible en múltiples colores.</strong>
+            </p>
+            <div class="color-options" style="justify-content: center; margin-bottom: 2rem;">
+                <div class="color-dot color-rojo"></div>
+                <div class="color-dot color-azul"></div>
+                <div class="color-dot color-amarillo"></div>
+                <div class="color-dot color-negro"></div>
+                <div class="color-dot color-blanco"></div>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;" onclick="closeModalAndContact()">
+                💬 Solicitar Cotización
+            </button>
+        </div>
+    </div>
+
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        ↑
+    </button>
+
+    <script>
+        function createParticles() {
+            const container = document.getElementById('particles');
+            for (let i = 0; i < 20; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 15 + 's';
+                particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+
+            const scrollTop = document.getElementById('scrollTop');
+            if (window.scrollY > 300) {
+                scrollTop.classList.add('active');
+            } else {
+                scrollTop.classList.remove('active');
+            }
+        });
+
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('navMenu').classList.remove('active');
+            });
+        });
+
+        function toggleService(id) {
+            const serviceItems = document.getElementById('service-' + id);
+            const serviceCard = serviceItems.closest('.service-card');
+            
+            document.querySelectorAll('.service-card').forEach(card => {
+                if (card !== serviceCard) {
+                    card.classList.remove('active');
+                    card.querySelector('.service-items').classList.remove('active');
+                }
+            });
+            
+            serviceCard.classList.toggle('active');
+            serviceItems.classList.toggle('active');
+        }
+
+        function filterCatalog(category, event) {
+            const items = document.querySelectorAll('.catalog-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            items.forEach(item => {
+                if (category === 'todos' || item.dataset.category === category) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        function showProductModal(title, icon) {
+            document.getElementById('modalTitle').textContent = title;
+            document.getElementById('modalIcon').textContent = icon;
+            document.getElementById('productModal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.remove('active');
+        }
+
+        function closeModalAndContact() {
+            const productName = document.getElementById('modalTitle').textContent;
+            closeModal();
+            document.getElementById('servicio').value = 'promocionales';
+            document.getElementById('mensaje').value = 'Estoy interesado en cotizar: ' + productName;
+            document.querySelector('#contacto').scrollIntoView({ behavior: 'smooth' });
+            
+            setTimeout(() => {
+                document.getElementById('nombre').focus();
+            }, 500);
+        }
+
+        document.getElementById('productModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        function enviarFormulario() {
+            const nombre = document.getElementById('nombre').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const servicio = document.getElementById('servicio').value;
+            const mensaje = document.getElementById('mensaje').value.trim();
+
+            if (!nombre || !email || !telefono) {
+                alert('⚠️ Por favor completa todos los campos requeridos:\n- Nombre\n- Email\n- Teléfono');
+                return;
+            }
+
+            if (!email.includes('@') || !email.includes('.')) {
+                alert('⚠️ Por favor ingresa un email válido');
+                return;
+            }
+
+            alert(`✅ ¡Gracias ${nombre}!\n\nHemos recibido tu solicitud de cotización.\n\nNos pondremos en contacto contigo muy pronto.\n\n📞 También puedes llamarnos directamente:\nNextel: 3538-2706\n(Servicio 24 horas)\n\n💳 Aceptamos pagos a 3 y 6 meses sin intereses`);
+            
+            document.getElementById('nombre').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('telefono').value = '';
+            document.getElementById('servicio').value = '';
+            document.getElementById('mensaje').value = '';
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .catalog-item, .portfolio-item, .mv-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        document.querySelectorAll('.color-dot').forEach(dot => {
+            dot.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.style.transform = 'scale(1.5)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 200);
+            });
+        });
+
+        function animateCounter(element, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.textContent = Math.floor(current);
+            }, 30);
+        }
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.dataset.animated) {
+                    entry.target.dataset.animated = 'true';
+                    const statNumber = entry.target.querySelector('.stat-number');
+                    const text = statNumber.textContent;
+                    const number = parseInt(text);
+                    if (!isNaN(number)) {
+                        animateCounter(statNumber, number);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-card').forEach(card => {
+            statsObserver.observe(card);
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        console.log('%c🎨 Contraste Publicidad', 'font-size: 20px; font-weight: bold; color: #2563eb;');
+        console.log('%cSitio web diseñado con amor para México 🇲🇽', 'font-size: 14px; color: #dc2626;');
+        console.log('%c📞 Contacto: Nextel 3538-2706 | 24/7', 'font-size: 12px; color: #16a34a;');
+    </script>
+</body>
+</html>
